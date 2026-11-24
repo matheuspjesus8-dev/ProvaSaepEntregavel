@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAEPVision - Minhas publicações</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <section class="formulario">
+      <h2>Formulário de Cadastro de Fotografias</h2>
+      <form id="formFoto" novalidate>
+        <div class="grupo">
+          <label for="titulo">Título da Imagem</label>
+          <input type="text" id="titulo" placeholder="Ex.: Dedo de Deus">
+          <div class="erro" id="erroTitulo"></div>
+        </div>
+        <div class="grupo">
+          <label for="local">Fonte de origem</label>
+          <input type="text" id="local" placeholder="Ex.: Rio de Janeiro">
+          <div class="erro" id="erroLocal"></div>
+        </div>
+        <div class="grupo">
+          <label for="imagem">Imagem</label>
+          <div class="upload">
+            <button type="button" class="btn" id="btnArquivo">Escolher arquivo</button>
+            <input type="file" id="imagem" accept=".jpg,.jpeg,.png,.gif,.webp">
+            <span class="nome-arquivo" id="nomeArquivo">Nenhum arquivo escolhido</span>
+          </div>
+          <div class="erro" id="erroImagem"></div>
+        </div>
+        <div class="acoes"><button type="submit" class="btn" id="btnCadastrar">Cadastrar</button></div>
+      </form>
+    </section>
+
+    <h2 class="secao-titulo">Publicações cadastradas</h2>
+    <section class="galeria" id="publicacoes"></section>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/publicacoes.js"></script>
+</body>
+</html>
